@@ -3,6 +3,14 @@ Usage
 
 .. _installation:
 
+Installation
+-----------
+
+Clone the repository on both your local machine and the robot's rasberry pi, with
+.. code-block:: console
+
+   $ git clone https://github.com/FRC1076/RobotKitLib.git
+
 Dependencies
 ------------
 
@@ -15,14 +23,6 @@ First, install the dependencies using pip:
 .. code-block:: console
 
    (.venv) $ pip install -R requirements.txt
-
-Instalation
------------
-
-Clone the repository on both your local machine and the robot's rasberry pi, with
-.. code-block:: console
-
-   $ git clone https://github.com/FRC1076/RobotKitLib.git
 
 On the Raspberry Pi
 -------------------
