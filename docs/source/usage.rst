@@ -3,32 +3,65 @@ Usage
 
 .. _installation:
 
-Installation
+Dependencies
 ------------
 
-To use Lumache, first install it using pip:
+**Note for Windows Users:** In order to deploy code, you will need to install a bash terminal
+such as Git Bash, or, preferably, Windows Subsystem for Linux (Ubuntu)
 
+Python 3.9 or newer is required to run this project.
+
+First, install the dependencies using pip:
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install -R requirements.txt
 
-Creating recipes
-----------------
+Instalation
+-----------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+Clone the repository on both your local machine and the robot's rasberry pi, with
+.. code-block:: console
 
-.. autofunction:: lumache.get_random_ingredients
+   $ git clone https://github.com/FRC1076/RobotKitLib.git
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+On the Raspberry Pi
+-------------------
 
-.. autoexception:: lumache.InvalidKindError
+Enable SSH and GPIO in the configuration menu reached with
+.. code-block:: console
 
-For example:
+   $ sudo raspi-config
+See the Raspberry Pi Documentation for further detail.
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+Setup the systemd service with
+.. code-block:: console
+
+   $ sudo ./setup_autorunner.sh
+
+
+Usage
+-----
+
+The workflow of a RobotKitLib-based robot competition is as similar as possible to FRC-WPILIB.
+Thus the basic equation of Code -> Deploy to Pi -> Run code with Driverstation remains.
+
+Deploying Code
+--------------
+
+Deploy code to the Robot with
+.. code-block:: console
+
+   $ python robot.py --action deploy --ip_addr localhost
+Replacing 'localhost' with the IP address of the robot.
+
+Running the Driverstation
+-------------------------
+
+Run the driverstation with
+.. code-block:: console
+
+   $ python driverstation.py localhost
+Replacing 'localhost' with the IP address of the robot.
+
+
 
