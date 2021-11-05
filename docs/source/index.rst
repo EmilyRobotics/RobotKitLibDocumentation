@@ -1,10 +1,15 @@
-Welcome to Lumache's documentation!
+Welcome to RobotKitLib's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**RobotKitLib** is our replacement for WPILIB-robotpy for the Freenove Raspberry Pi Robot Kit, with compaitability (with minimal modifications) for FRC robotpy code.
+
+The Freenove 4WD Raspberry Pi - based robot kit looks like a promising platform for software training. This kits costs about $70, but requires a number of other components to be fully functional.
+
+    $35 Raspberry Pi 3B+
+    $10 32G SD-Card
+    $12 4 x 3.7V Lithium Ion Cells
+    $10 LI battery charger
+
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
